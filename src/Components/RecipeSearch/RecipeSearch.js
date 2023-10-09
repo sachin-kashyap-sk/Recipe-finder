@@ -7,7 +7,7 @@ const RecipeSearch = () => {
   const dispatch = useDispatch();
   const [timeoutId, setTimeOutId] = useState();
 
-  const OnTextChange = (e) => {
+  const onTextChange = (e) => {
     clearTimeout(timeoutId);
     const timeout = setTimeout(() => dispatch(RecipeApi(e.target.value)), 500);
     setTimeOutId(timeout);
@@ -23,7 +23,7 @@ const RecipeSearch = () => {
           <input
             placeholder="Search your Recipe"
             className={classes.input}
-            onChange={OnTextChange}
+            onChange={onTextChange}
           />
         </div>
       </div>
