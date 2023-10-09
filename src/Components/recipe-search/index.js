@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import classes from "../StylesContainer/RecipeSearch/RecipeSearch.module.css";
-import RecipeList from "../RecipeList/RecipeList";
-import { useDispatch } from "react-redux";
-import { RecipeApi } from "../BackendApi/RecipeApi";
-const RecipeSearch = () => {
-  const dispatch = useDispatch();
+import React, { useContext, useState } from "react";
+import classes from "../styles-container/recipe-search/recipe-search.module.css";
+import RecipeList from "../recipe-list";
+import { RecipeContext } from "../search-context";
+
+export const RecipeSearch = () => {
   const [timeoutId, setTimeOutId] = useState();
+  const { setRecipeData } = useContext(RecipeContext);
 
   const onTextChange = (e) => {
     clearTimeout(timeoutId);
-    const timeout = setTimeout(() => dispatch(RecipeApi(e.target.value)), 500);
+    const timeout = setTimeout(() => {
+      setRecipeData(e.target.value);
+    }, 500);
     setTimeOutId(timeout);
   };
 

@@ -1,17 +1,16 @@
-import React from "react";
-import classes from "../StylesContainer/RecipeList/RecipeList.module.css";
+import React, { useContext } from "react";
+import classes from "../styles-container/recipe-list/recipe-list.module.css";
 import { useNavigate } from "react-router-dom";
-import { selectedRecipe } from "../ReduxSection/RecipeDetail/RecipeDetailSlice";
-import { useSelector } from "react-redux";
 import recipeSearch from "../../Assets/searchRecipe.jpg";
+import { RecipeContext } from "../search-context";
 const RecipeList = () => {
-  const RecipeData = useSelector(selectedRecipe);
+  const { recipeData } = useContext(RecipeContext);
   const navigation = useNavigate();
   return (
     <div>
       <div className={classes.mainContainer}>
-        {RecipeData?.hits?.length ? (
-          RecipeData?.hits?.map((item) => (
+        {recipeData?.hits?.length ? (
+          recipeData?.hits?.map((item) => (
             <div className={classes.card} key={item.recipe.uri}>
               <img
                 style={{ borderRadius: "10px" }}
@@ -23,7 +22,7 @@ const RecipeList = () => {
                 <button
                   onClick={() => {
                     const id = item.recipe.uri.split("#");
-                    navigation(`/RecipeDetail/${id[1]}`);
+                    navigation(`/recipeDetail/${id[1]}`);
                   }}
                   className={classes.btn}
                 >
