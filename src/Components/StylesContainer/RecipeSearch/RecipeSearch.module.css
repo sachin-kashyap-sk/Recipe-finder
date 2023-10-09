@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  background-color: #0f0f0f;
+  height: 10vh;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.recipeTextContainer {
+  display: flex;
+  padding-left: 2%;
+  
+}
+
+.recipeText {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.inputContainer {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  padding: 1%;
+  width: 40%;
+  border-radius: 5px;
+}

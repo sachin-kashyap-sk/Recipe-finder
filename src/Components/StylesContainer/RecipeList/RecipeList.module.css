@@ -1,0 +1,43 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 2%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  background-color: #ffffff;
+  margin-top: 2%;
+  box-shadow: 0px -8px 8px -8px rgba(0, 0, 0, 0.35),
+    8px 0px 8px -8px rgba(0, 0, 0, 0.35), 0px 8px 8px -8px rgba(0, 0, 0, 0.35),
+    -8px 0px 8px -8px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 17px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-weight: 600;
+  color: #0f0f0f;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+.btn {
+  padding: 2%;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+}

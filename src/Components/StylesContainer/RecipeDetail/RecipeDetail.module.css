@@ -1,0 +1,59 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: #ffffff;
+  box-shadow: 0px -20px 20px -20px rgba(0, 0, 0, 0.35),
+    25px 0px 20px -20px rgba(0, 0, 0, 0.35),
+    0px 25px 20px -20px rgba(0, 0, 0, 0.35),
+    -25px 0px 20px -20px rgba(0, 0, 0, 0.35);
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.secContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-top: 3%;
+}
+
+.labelText {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 2%;
+}
+
+.ingredientText {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nutrientsContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+}
+
+.thirdContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.unit {
+  padding-left: 2%;
+  font-size: 17px;
+  font-weight: 500;
+}
