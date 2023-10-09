@@ -9,11 +9,11 @@ import { Store } from "./Components/ReduxSection/Store/Store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={Store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    {/* <BrowserRouter> */}
+    <Provider store={Store}>
+      <App />
+    </Provider>
+    {/* </BrowserRouter> */}
   </React.StrictMode>
 );
 
